@@ -26,5 +26,5 @@ CREATE TABLE productos
     foreign key ( idCategoria ) references categorias ( idCategoria ),
     prdDescripcion varchar(1000) unique not null,
     prdImagen varchar(45) not null,
-    prdActivo boolean default(1)
+    prdActivo boolean default(1) not null
 );
