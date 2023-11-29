@@ -26,3 +26,46 @@
         FROM productos, marcas  
         WHERE productos.idMarca = marcas.idMarca;  
 
+
+    SELECT prdNombre, prdPrecio, mkNombre, catnombre    
+      FROM productos, marcas, categorias    
+      WHERE productos.idMarca = marcas.idMarca    
+      AND productos.idCategoria = categorias.idCategoria;    
+ 
+
+## Consultas usnado **JOIN**
+
+> En la técnica utilizando la palabra reservada **JOIN**
+> cuando mencionamos el **FROM** sólo especificamos la 
+> tabla principal.
+> Y luego para mencionar la tabla secundaria utilizamos 
+> la palabra **JOIN** 
+> y finalizamos igulando la columna en común con la palabra
+> **ON**
+
+> Sintáxis:
+
+    SELECT colTabla1, coltabla1, colTabla2    
+        FROM tabla1  
+        JOIN tabla2  
+        ON tabla1.fk = tabla2.pk;  
+
+    SELECT prdNombre, prdPrecio, mkNombre  
+      FROM productos  
+        JOIN marcas  
+          ON productos.idMarca = marcas.idMarca;
+
+
+    SELECT prdNombre, prdPrecio, mkNombre, catNombre  
+      FROM productos  
+        JOIN marcas  
+          ON productos.idMarca = marcas.idMarca  
+        JOIN categorias    
+          ON productos.idCategoria = categorias.idCategoria;
+
+
+
+
+
+
+
